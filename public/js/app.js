@@ -13,7 +13,7 @@ form.addEventListener('submit', (e)=> {
     message1.textContent = 'Searching...'
     message2.textContent = ''
 
-    fetch('http://localhost:3000/weather?search='+ search + '').then((response)=> {
+    fetch('/weather?search='+ search + '').then((response)=> {
         response.json().then((data)=> {
             if(data.error){
                 message1.textContent = data.error
