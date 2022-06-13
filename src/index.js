@@ -57,6 +57,22 @@ app.get('/weather',(req,res)=> {
     })
 })
 
+app.get('/help/*',(req,res)=> {
+    res.render('404',{
+        title: '404',
+        msg: 'Page Not found',
+        createdBy: 'Justice Sithole'
+    })
+})
+
+app.get('*',(req,res)=> {
+    res.render('404',{
+        title: '404',
+        msg: 'Page not found',
+        createdBy: 'Justice Sithole'
+    })
+})
+
 app.listen(port,()=> {
     console.log(`server started on port ${port}`)
 })
