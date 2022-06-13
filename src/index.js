@@ -17,7 +17,7 @@ hbs.registerPartials(partialsPath)
 
 const port = 3000 || process.env.PORT
 
-app.get('',(req,res)=> {
+app.get('/',(req,res)=> {
     res.render('index',{
         title: 'Weather App',
         createdBy: 'Justice Sithole'
